@@ -1,4 +1,4 @@
 export function vui(){
 	var r = Math.random();
-	return ((30*r+90)*60);
+	return (6*(Math.sqrt(r))+1);
 }

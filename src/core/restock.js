@@ -6,6 +6,7 @@ export function restock(values) {
     values.tpr = values.t+vui();
     values.ct = values.ct+2*values.sth;
     values.chd=values.chd+values.sth;
+    console.log("chd ", values.chd);
     values.sth=values.chp;
     values.cth=values.cth+values.sth;
 

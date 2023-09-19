@@ -4,14 +4,12 @@ import {chpd} from './chpd.js';
 export function quejas(values){
     var r = Math.random();
     var cantHamburguesasADesechar = chpd();
-    console.log("hamburguesas a desechar  "+cantHamburguesasADesechar);
     var tamañoDePedido = cp();
     if(r<(5/100)){
         if(cantHamburguesasADesechar > tamañoDePedido){
             values.ct = values.ct+tamañoDePedido*2
             if(tamañoDePedido>values.sth){
                 values.sth = 0;
-                console.log("sth  3"+ values.sth);
 
                 if((values.tfcl<values.t)&&(values.ticl>values.t)){
                     values.ta = values.ta + (values.tfcl-values.t);
@@ -26,6 +24,8 @@ export function quejas(values){
                         if((values.tc-values.t)>60){
                             values.ct = values.ct + 2*tamañoDePedido;
                             values.chg = values.chg + tamañoDePedido;
+                            values.chd = values.chd + tamañoDePedido;
+
                         }
             
                     }else{
@@ -33,10 +33,11 @@ export function quejas(values){
                         if((values.t-values.tc)>60){
                             values.ct = values.ct + 2*tamañoDePedido;
                             values.chg = values.chg + tamañoDePedido;
+                            values.chd = values.chd + tamañoDePedido;
+
                         }
                     }
                     values.sth = 0;
-                    console.log("sth  4"+ values.sth);
 
                 }else{
                     values.sth = values.sth - tamañoDePedido;
@@ -44,12 +45,13 @@ export function quejas(values){
                     if(values.ta>60){
                         values.ct = values.ct + 2*tamañoDePedido;
                         values.chg = values.chg + tamañoDePedido;
+                        values.chd = values.chd + tamañoDePedido;
+
                     }
                 }
                 values.ta=0;
             }else{
                 values.sth=values.sth-cantHamburguesasADesechar;
-                console.log("sth  5"+ values.sth);
 
             }
         }

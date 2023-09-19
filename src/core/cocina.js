@@ -2,7 +2,6 @@ import {cp} from './cp.js';
 
 export function cocina(values){
     var tamañoDePedido = cp();
-    console.log("TP "+tamañoDePedido);
 
     if((values.tfcl<values.t)&&(values.ticl>values.t)){
         values.ta = values.ta + (values.tfcl-values.t);
@@ -17,6 +16,7 @@ export function cocina(values){
             if((values.tc-values.t)>60){
                 values.ct = values.ct + 2*tamañoDePedido;
                 values.chg = values.chg + tamañoDePedido;
+
             }
 
         }else{
@@ -27,12 +27,9 @@ export function cocina(values){
             }
         }
         values.sth = 0;
-        console.log("sth 1 "+ values.sth);
 
     }else{
-        console.log("TP "+tamañoDePedido);
         values.sth = values.sth - tamañoDePedido;
-        console.log("sth  2"+ values.sth);
         values.ta = values.ta + tamañoDePedido*values.de;
         if(values.ta>60){
             values.ct = values.ct + 2*tamañoDePedido;
