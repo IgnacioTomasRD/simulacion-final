@@ -3,14 +3,12 @@ import {dcl} from './dcl.js';
 
 
 export function corteDeLuz(values){
-    console.log("corte de luz");
     values.t=values.tpcdl;
     var intervaloEntreCortesDeLuz= icl();
     values.ticl=values.t;
     values.tpcdl=values.t+intervaloEntreCortesDeLuz;
-    var duracionDeCorteDeLuz= dcl();
-    values.tfcl=values.t+10;
-    values.ct=values.ct+(duracionDeCorteDeLuz*values.pns);
+    var duracionDeCorteDeLuz = dcl(); // en segundos
+    values.tfcl=values.t+10; // mas diez segundos
+    values.ct=values.ct+(duracionDeCorteDeLuz*values.pns); // precio de nafta por seguno
     return { ...values };
-
 }

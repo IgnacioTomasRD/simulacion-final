@@ -6,7 +6,6 @@ import {higieneYRotacion} from './core/higieneYRotacion.js';
 import {corteDeLuz} from './core/corteDeLuz.js';
 
 
-
 var values = initialValues;
 
 function print(message, value) {
@@ -71,10 +70,8 @@ function main(){
     while(values.t < values.tf) {
         values = nextEvent();
     }
-
     values.phg=(values.chg*100)/values.cth;
     values.phd=(values.chd*100)/values.cth;
-
     print("tiempo de proximo pedido por vehiculo", values.tppv);
     print("tiempo de proximo pedido por peaton", values.tppp);
     print("tiempo de proximo restock", values.tpr);
@@ -96,16 +93,10 @@ function main(){
     print("tiempo comprometido de cocina", values.tc);
     print("intervalo de higiene y rotacion", values.ihyr);
     print("duracion de higiene y rotacion", values.phyr);
-
     console.log("--------------------------RESULTADOS--------------------------")
-    print("--------------------------porcentaje de hamburguesas gratis--------------------------   ", values.phg);
-    print("--------------------------porcentaje de hamburguesas desechadas--------------------------   ", values.phd);
-    print("--------------------------costo total--------------------------   ", values.ct);
-
-
-
-
-
+    print("Porcentaje de hamburguesas gratis:     ", values.phg);
+    print("Porcentaje de hamburguesas desechadas: ", values.phd);
+    print("Costo total:                           ", values.ct);
 }
 
 main();

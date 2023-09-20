@@ -24,7 +24,8 @@ const initialValues = {
 	"phyr":35,//duracion de higiene y rotacion
 	"pns":0.007,//precio nafta
 	"phg":0,//porcentaje de hamburguesas gratis
-	"phd":0//porcentaje de hamburguesas desechadas
+	"phd":0,//porcentaje de hamburguesas desechadas
+	"cp": 0
 }
 
 export {

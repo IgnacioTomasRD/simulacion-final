@@ -1,7 +1,7 @@
 import {cp} from './cp.js';
 
 export function cocina(values){
-    var tamañoDePedido = cp();
+    values.cp = cp();
 
     if((values.tfcl<values.t)&&(values.ticl>values.t)){
         values.ta = values.ta + (values.tfcl-values.t);
@@ -9,31 +9,26 @@ export function cocina(values){
     if((values.tihyr>values.t)&&(values.tfhyr<values.t)){
         values.ta = values.ta + (values.tfhyr-values.t);
     }
-    if(tamañoDePedido>values.sth){
-        values.ta = values.ta + 24*(tamañoDePedido-values.sth) + tamañoDePedido*values.de;
+    if(values.cp>values.sth){
+        values.ta = values.ta + 24*(values.cp-values.sth) + values.cp*values.de; // de: duracion de empaquetado
         if(values.tc>values.t){
             values.tc = values.tc + values.ta;
-            if((values.tc-values.t)>60){
-                values.ct = values.ct + 2*tamañoDePedido;
-                values.chg = values.chg + tamañoDePedido;
-
-            }
 
         }else{
             values.tc = values.t + values.ta;
-            if((values.t-values.tc)>60){
-                values.ct = values.ct + 2*tamañoDePedido;
-                values.chg = values.chg + tamañoDePedido;
-            }
+        }
+        if((values.tc-values.t)>60){
+            values.ct = values.ct + 2; // se regala una sola hamburguesa
+            values.chg = values.chg + 1;
         }
         values.sth = 0;
 
     }else{
-        values.sth = values.sth - tamañoDePedido;
-        values.ta = values.ta + tamañoDePedido*values.de;
+        values.sth = values.sth - values.cp;
+        values.ta = values.ta + values.cp*values.de;
         if(values.ta>60){
-            values.ct = values.ct + 2*tamañoDePedido;
-            values.chg = values.chg + tamañoDePedido;
+            values.ct = values.ct + 2; 
+            values.chg = values.chg + 1;
         }
     }
     values.ta=0;
