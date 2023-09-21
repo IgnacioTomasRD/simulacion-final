@@ -1,14 +1,11 @@
-export function iap() {
-	var m = (1191/40);
-    var r1 = Math.random();
-    var x = ((1/2)+(5/2)*r1);
-    var r2 = Math.random();
-    var y = m*r2;
-    var f = ((-23,5)*x+41,525);
-    
-    if(y<=f){
-        return x;
-    }else{
-    	iap();
+export function iap(){
+    var m = 1191/40, x, y=1, f=0, random1, random2;
+    while(y>f){
+        random1 = Math.random();
+        random2= Math.random();
+        y = m * random1;
+        x = (5/2) * random2 + (1/2);
+        f = -(47/2)  * x + (1661/40);
     }
+    return x*60;
 }

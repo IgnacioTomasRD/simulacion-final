@@ -1,14 +1,11 @@
-export function iav() {
-	var m = (5/3);
-    var r1 = Math.random();
-    var x = r1;
-    var r2 = Math.random();
-    var y = m*r2;
-    var f = (x^2+(2/3));
-    
-    if(y<=f){
-        return x;
-    }else{
-    	iav();
+export function iav(){
+    var m = 779/30, x, y=1, f=0, random1, random2;
+    while(y>f){
+        random1 = Math.random();
+        random2= Math.random();
+        y = m * random1;
+        x = (5/4) * random2 + (3/4);
+        f = -(604/15)  * x + (337/6);
     }
+    return x*60;
 }

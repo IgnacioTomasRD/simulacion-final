@@ -93,10 +93,12 @@ function main(){
     print("tiempo comprometido de cocina", values.tc);
     print("intervalo de higiene y rotacion", values.ihyr);
     print("duracion de higiene y rotacion", values.phyr);
+    print("clientes totales", values.cct);
     console.log("--------------------------RESULTADOS--------------------------")
     print("Porcentaje de hamburguesas gratis:     ", values.phg);
     print("Porcentaje de hamburguesas desechadas: ", values.phd);
     print("Costo total:                           ", values.ct);
+    print("tiempo medio de atención               ", values.tta/values.cct);
 }
 
 main();

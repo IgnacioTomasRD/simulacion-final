@@ -16,6 +16,7 @@ export function quejas(values){
         } else {
             values.sth = values.sth - cantHamburguesasADesechar;
         }
+        values.chd = values.chd + cantHamburguesasADesechar;
     }
     
     return { ...values };

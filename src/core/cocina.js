@@ -20,6 +20,8 @@ export function cocina(values){
         if((values.tc-values.t)>60){
             values.ct = values.ct + 2; // se regala una sola hamburguesa
             values.chg = values.chg + 1;
+            values.tc = values.tc + 24;
+            values.cth = values.cth + 1
         }
         values.sth = 0;
 
@@ -29,8 +31,11 @@ export function cocina(values){
         if(values.ta>60){
             values.ct = values.ct + 2; 
             values.chg = values.chg + 1;
+            values.cth = values.cth + 1
         }
     }
+    values.tta = values.tta + values.ta;
+    values.cct = values.cct + 1;
     values.ta=0;
 
     return { ...values };

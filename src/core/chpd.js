@@ -1,3 +1,4 @@
 export function chpd(){
-    return 10;
+    const r = Math.random()
+    return Math.floor(1+8*r);
 }
