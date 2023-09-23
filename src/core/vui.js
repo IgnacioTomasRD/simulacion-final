@@ -5,5 +5,5 @@
 
 export function vui(){
 	var r = Math.random();
-	return (30*r + 60)*60;
+	return (30*r + 20)*60;
 }

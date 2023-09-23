@@ -1,4 +1,4 @@
 export function icl() {
 var r = Math.random();
-return ((47*r+3)*60);
+return ((47*r+3)*60*60*24);
 }

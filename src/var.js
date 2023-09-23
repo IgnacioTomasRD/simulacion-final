@@ -12,7 +12,7 @@ const initialValues = {
 	"chp": 250, //cantidad de hamburguesas recibidas periodicamente (variable de control)
 	"cth": 0, //cantidad total de hamburguesas
 	"chg":0,//cantidad de hamburguesas entregadas gratis
-	"tf": 100000, //tiempo final
+	"tf": 10000000, //tiempo final
 	"tfcl": 0, //tiempo final de corte de luz
 	"ticl": 0, //tiempo inicial de corte de luz
 	"ta": 0, //tiempo de atencion
