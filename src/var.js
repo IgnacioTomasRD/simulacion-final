@@ -9,7 +9,7 @@ const initialValues = {
 	"ct": 0, //costo total
 	"sth": 0, //stock de hamburguesas
 	"chd": 0, //cantidad de hamburguesas desechadas
-	"chp": 250, //cantidad de hamburguesas recibidas periodicamente (variable de control)
+	"chp": 550, //cantidad de hamburguesas recibidas periodicamente (variable de control)
 	"cth": 0, //cantidad total de hamburguesas
 	"chg":0,//cantidad de hamburguesas entregadas gratis
 	"tf": 10000000, //tiempo final
