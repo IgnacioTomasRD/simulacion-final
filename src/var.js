@@ -1,7 +1,7 @@
 const HOLA_ME_LLAMO_NACHO = "HOLAAAAA";
 const initialValues = {
 	"tppv": 120, //tiempo de proximo pedido por vehiculo
-	"tppp": 150, //tiempo de proximo pedido por peaton
+	"tppp": 50, //tiempo de proximo pedido por peaton
 	"tpr": 1000, //tiempo de proximo restock
 	"tpcdl": 1500, //tiempo de proximo corte de luz
 	"tphyr": 200, //tiempo de proxima higiene y rotacion
@@ -9,7 +9,7 @@ const initialValues = {
 	"ct": 0, //costo total
 	"sth": 0, //stock de hamburguesas
 	"chd": 0, //cantidad de hamburguesas desechadas
-	"chp": 550, //cantidad de hamburguesas recibidas periodicamente (variable de control)
+	"chp": 50, //cantidad de hamburguesas recibidas periodicamente (variable de control)
 	"cth": 0, //cantidad total de hamburguesas
 	"chg":0,//cantidad de hamburguesas entregadas gratis
 	"tf": 10000000, //tiempo final
